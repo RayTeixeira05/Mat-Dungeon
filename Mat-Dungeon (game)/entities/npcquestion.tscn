@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b3y0tshotrbxv"]
+
+[ext_resource type="Texture2D" uid="uid://bbcrlem047l3" path="res://sprites/sprite npcquestion1.png" id="1_ak6jv"]
+[ext_resource type="Script" uid="uid://d2elr41cfk4ts" path="res://scripts/npcquestion.gd" id="1_o17yt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpwuv"]
+size = Vector2(96, 1954.75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o17yt"]
+atlas = ExtResource("1_ak6jv")
+region = Rect2(209, 0, 209, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ak6jv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o17yt")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kllub"]
+size = Vector2(507, 259.3125)
+
+[node name="npcquestion" type="CharacterBody2D" unique_id=1309774320]
+script = ExtResource("1_o17yt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=890029297]
+position = Vector2(4, -933.625)
+shape = SubResource("RectangleShape2D_xpwuv")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=924826702]
+position = Vector2(6, -14)
+scale = Vector2(0.5251196, 0.4960937)
+sprite_frames = SubResource("SpriteFrames_ak6jv")
+animation = &"idle"
+frame_progress = 0.6268534
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1452171435]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1043400099]
+position = Vector2(-21, -81)
+shape = SubResource("RectangleShape2D_kllub")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

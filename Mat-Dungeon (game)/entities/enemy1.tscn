@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bow8hwt45q6rg"]
+
+[ext_resource type="Script" uid="uid://bpplxp7m10s6w" path="res://scripts/enemy.gd" id="1_55jtl"]
+[ext_resource type="Texture2D" uid="uid://ckauvfiaqtynw" path="res://sprites/sprite armadilhas (floresta).png" id="2_mpr68"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jbpan"]
+radius = 38.0
+height = 98.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft8do"]
+atlas = ExtResource("2_mpr68")
+region = Rect2(0, 480, 157, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wwv6"]
+atlas = ExtResource("2_mpr68")
+region = Rect2(157, 480, 157, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vja8"]
+atlas = ExtResource("2_mpr68")
+region = Rect2(314, 480, 157, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwav8"]
+atlas = ExtResource("2_mpr68")
+region = Rect2(471, 480, 157, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jbpan"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ft8do")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wwv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vja8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwav8")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ic6et"]
+radius = 51.0
+height = 120.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1246642052]
+script = ExtResource("1_55jtl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2037264718]
+shape = SubResource("CapsuleShape2D_jbpan")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=244238184]
+position = Vector2(2, -12)
+scale = Vector2(0.76592356, 0.796875)
+sprite_frames = SubResource("SpriteFrames_jbpan")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.44059134
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1881593617]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=439116018]
+position = Vector2(12, -6)
+shape = SubResource("CapsuleShape2D_ic6et")

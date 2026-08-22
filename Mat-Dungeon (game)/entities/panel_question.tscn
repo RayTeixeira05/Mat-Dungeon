@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://dqjbg4u53cruh"]
+
+[ext_resource type="Texture2D" uid="uid://n8dxwf82vdyk" path="res://sprites/sprite caixa de perguntas.png" id="1_momyb"]
+[ext_resource type="Script" uid="uid://btyw27ddn55bm" path="res://scripts/panel_question.gd" id="1_pm08g"]
+[ext_resource type="FontFile" uid="uid://bcy20obgliqxb" path="res://fonts/PixelifySans-VariableFont_wght.ttf" id="2_xujal"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xujal"]
+font = ExtResource("2_xujal")
+font_size = 102
+font_color = Color(0, 0, 0, 1)
+outline_size = 7
+
+[sub_resource type="LabelSettings" id="LabelSettings_gyamk"]
+font_size = 81
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontFile" id="FontFile_gyamk"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/69/0/ascent = 0.0
+cache/0/69/0/descent = 0.0
+cache/0/69/0/underline_position = 0.0
+cache/0/69/0/underline_thickness = 0.0
+cache/0/69/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_jbpan"]
+font = SubResource("FontFile_gyamk")
+font_size = 69
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w4pc8"]
+font = ExtResource("2_xujal")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=301699987]
+scale = Vector2(0.6, 0.6)
+transform = Transform2D(0.6, 0, 0, 0.6, 0, 0)
+script = ExtResource("1_pm08g")
+
+[node name="Panel" type="Panel" parent="." unique_id=1981266202]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -168.33334
+offset_right = -240.0
+offset_bottom = -168.33334
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=306940998]
+layout_mode = 0
+offset_left = -5.0000305
+offset_top = 18.333344
+offset_right = 1531.0
+offset_bottom = 1042.3334
+texture = ExtResource("1_momyb")
+
+[node name="Label" type="Label" parent="Panel" unique_id=511316442]
+layout_mode = 0
+offset_left = 197.49994
+offset_top = 390.0
+offset_right = 1353.5
+offset_bottom = 530.0
+text = "Qual é a derivada de      "
+label_settings = SubResource("LabelSettings_xujal")
+
+[node name="Label2" type="Label" parent="Panel" unique_id=1120298751]
+layout_mode = 0
+offset_left = 1203.3334
+offset_top = 394.99997
+offset_right = 1335.3334
+offset_bottom = 505.99997
+text = "x² ?"
+label_settings = SubResource("LabelSettings_gyamk")
+
+[node name="ButtonA" type="Button" parent="Panel" unique_id=1210672822]
+layout_mode = 0
+offset_left = 115.83328
+offset_top = 585.0
+offset_right = 740.83325
+offset_bottom = 711.6666
+
+[node name="LabelA" type="Label" parent="Panel/ButtonA" unique_id=1523594796]
+layout_mode = 0
+offset_left = 269.16672
+offset_top = 9.999976
+offset_right = 569.16675
+offset_bottom = 102.99998
+text = "x³ / 3"
+label_settings = SubResource("LabelSettings_jbpan")
+
+[node name="ButtonB" type="Button" parent="Panel" unique_id=1226421281]
+layout_mode = 0
+offset_left = 782.49994
+offset_top = 584.99994
+offset_right = 1407.5
+offset_bottom = 711.66656
+
+[node name="LabelB" type="Label" parent="Panel/ButtonB" unique_id=307423910]
+layout_mode = 0
+offset_left = 327.50003
+offset_top = 15.00002
+offset_right = 627.5
+offset_bottom = 108.00002
+text = "x³"
+label_settings = SubResource("LabelSettings_jbpan")
+
+[node name="ButtonC" type="Button" parent="Panel" unique_id=1068845159]
+layout_mode = 0
+offset_left = 115.83328
+offset_top = 730.0
+offset_right = 740.83325
+offset_bottom = 856.6666
+
+[node name="LabelC" type="Label" parent="Panel/ButtonC" unique_id=1838237967]
+layout_mode = 0
+offset_left = 307.5001
+offset_top = 16.66661
+offset_right = 607.5001
+offset_bottom = 109.66661
+text = "2x"
+label_settings = SubResource("LabelSettings_jbpan")
+
+[node name="ButtonD" type="Button" parent="Panel" unique_id=864767967]
+layout_mode = 0
+offset_left = 779.1666
+offset_top = 730.0
+offset_right = 1412.4999
+offset_bottom = 856.6666
+
+[node name="LabelD" type="Label" parent="Panel/ButtonD" unique_id=100230025]
+layout_mode = 0
+offset_left = 270.8333
+offset_top = 19.999897
+offset_right = 570.83325
+offset_bottom = 112.99989
+text = "x² / 2"
+label_settings = SubResource("LabelSettings_jbpan")
+
+[node name="TimerLabel" type="Label" parent="Panel" unique_id=507042984]
+layout_mode = 0
+offset_left = 1283.3334
+offset_top = 266.66666
+offset_right = 1413.3334
+offset_bottom = 345.66666
+text = "20"
+label_settings = SubResource("LabelSettings_w4pc8")
+
+[connection signal="pressed" from="Panel/ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="Panel/ButtonB" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="Panel/ButtonC" to="." method="_on_button_c_pressed"]
+[connection signal="pressed" from="Panel/ButtonD" to="." method="_on_button_d_pressed"]

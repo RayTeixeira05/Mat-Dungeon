@@ -22,7 +22,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kllub"]
-size = Vector2(507, 259.3125)
+size = Vector2(117, 600.65625)
 
 [node name="npcquestion" type="CharacterBody2D" unique_id=1309774320]
 script = ExtResource("1_o17yt")
@@ -43,7 +43,7 @@ frame_progress = 0.6268534
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1043400099]
-position = Vector2(-21, -81)
+position = Vector2(-12.5, -251.67188)
 shape = SubResource("RectangleShape2D_kllub")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

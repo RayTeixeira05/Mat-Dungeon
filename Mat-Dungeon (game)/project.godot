@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MatDungeons"
-run/main_scene="res://scenes/jogo.tscn"
+run/main_scene="uid://c6ytd1wiadawd"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://sprites/icon.svg"
 

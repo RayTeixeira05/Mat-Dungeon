@@ -10,19 +10,45 @@ size = Vector2(96, 1954.75)
 atlas = ExtResource("1_ak6jv")
 region = Rect2(209, 0, 209, 256)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0icr5"]
+atlas = ExtResource("1_ak6jv")
+region = Rect2(0, 0, 210, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpwuv"]
+atlas = ExtResource("1_ak6jv")
+region = Rect2(211, 0, 211, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btwih"]
+atlas = ExtResource("1_ak6jv")
+region = Rect2(809, 0, 227, 256)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ak6jv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_o17yt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0icr5")
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 1.0
+"speed": 0.2
+}, {
+"frames": [{
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_xpwuv")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_btwih")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 1.5
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kllub"]
-size = Vector2(117, 600.65625)
+size = Vector2(130, 600.65625)
 
 [node name="npcquestion" type="CharacterBody2D" unique_id=1309774320]
 script = ExtResource("1_o17yt")
@@ -33,17 +59,17 @@ shape = SubResource("RectangleShape2D_xpwuv")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=924826702]
-position = Vector2(6, -14)
-scale = Vector2(0.5251196, 0.4960937)
+position = Vector2(4.4312196, -14)
+scale = Vector2(0.51017886, 0.4960937)
 sprite_frames = SubResource("SpriteFrames_ak6jv")
-animation = &"idle"
-frame_progress = 0.6268534
+animation = &"talking"
+frame_progress = 0.31107497
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1452171435]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1043400099]
-position = Vector2(-12.5, -251.67188)
+position = Vector2(-19, -251.67188)
 shape = SubResource("RectangleShape2D_kllub")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

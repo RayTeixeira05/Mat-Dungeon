@@ -14,6 +14,20 @@ outline_size = 7
 font_size = 81
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_sqs10"]
+font = ExtResource("2_xujal")
+font_size = 57
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fgps4"]
+font = ExtResource("2_xujal")
+font_size = 52
+font_color = Color(0.32941177, 1, 0.34509805, 1)
+outline_size = 8
+outline_color = Color(0, 0.68235296, 0, 1)
+shadow_size = 3
+shadow_color = Color(0.0026411712, 0.017802058, 0.021816978, 0)
+
 [sub_resource type="FontFile" id="FontFile_gyamk"]
 subpixel_positioning = 0
 msdf_pixel_range = 14
@@ -44,7 +58,6 @@ font_size = 69
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_w4pc8"]
-font = ExtResource("2_xujal")
 font_size = 50
 font_color = Color(0, 0, 0, 1)
 
@@ -92,12 +105,31 @@ offset_bottom = 505.99997
 text = "x² ?"
 label_settings = SubResource("LabelSettings_gyamk")
 
+[node name="Label3" type="Label" parent="Panel" unique_id=527374011]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 129.99997
+offset_right = 991.0
+offset_bottom = 198.99997
+text = "DERIVON O SÁBIO"
+label_settings = SubResource("LabelSettings_sqs10")
+
+[node name="Label4" type="Label" parent="Panel" unique_id=673406788]
+layout_mode = 0
+offset_left = 219.99994
+offset_top = 251.66667
+offset_right = 424.99988
+offset_bottom = 365.0
+text = "★"
+label_settings = SubResource("LabelSettings_fgps4")
+
 [node name="ButtonA" type="Button" parent="Panel" unique_id=1210672822]
 layout_mode = 0
 offset_left = 115.83328
 offset_top = 585.0
 offset_right = 740.83325
 offset_bottom = 711.6666
+focus_mode = 0
 
 [node name="LabelA" type="Label" parent="Panel/ButtonA" unique_id=1523594796]
 layout_mode = 0
@@ -114,6 +146,7 @@ offset_left = 782.49994
 offset_top = 584.99994
 offset_right = 1407.5
 offset_bottom = 711.66656
+focus_mode = 0
 
 [node name="LabelB" type="Label" parent="Panel/ButtonB" unique_id=307423910]
 layout_mode = 0
@@ -130,6 +163,7 @@ offset_left = 115.83328
 offset_top = 730.0
 offset_right = 740.83325
 offset_bottom = 856.6666
+focus_mode = 0
 
 [node name="LabelC" type="Label" parent="Panel/ButtonC" unique_id=1838237967]
 layout_mode = 0
@@ -146,6 +180,7 @@ offset_left = 779.1666
 offset_top = 730.0
 offset_right = 1412.4999
 offset_bottom = 856.6666
+focus_mode = 0
 
 [node name="LabelD" type="Label" parent="Panel/ButtonD" unique_id=100230025]
 layout_mode = 0
@@ -158,10 +193,10 @@ label_settings = SubResource("LabelSettings_jbpan")
 
 [node name="TimerLabel" type="Label" parent="Panel" unique_id=507042984]
 layout_mode = 0
-offset_left = 1283.3334
-offset_top = 266.66666
-offset_right = 1413.3334
-offset_bottom = 345.66666
+offset_left = 1284.9999
+offset_top = 258.3333
+offset_right = 1414.9999
+offset_bottom = 337.3333
 text = "20"
 label_settings = SubResource("LabelSettings_w4pc8")
 

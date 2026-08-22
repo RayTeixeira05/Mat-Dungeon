@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var animated: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animated_walk: AnimatedSprite2D = $AnimatedSprite2DWalk
 
-const SPEED = 300.0
+const SPEED = 330.0
 const JUMP_VELOCITY = -500.0
 const GRAVITY = 1000.0
 const VOID_Y = 750.0
@@ -53,6 +53,7 @@ func respawn():
 
 	if fade == null:
 		global_position = start_position
+		get_tree().call_group("npc_question", "reset_npc") 
 		respawning = false
 		dead = false
 		return
@@ -66,13 +67,12 @@ func respawn():
 	tween.tween_callback(func():
 		global_position = start_position
 		velocity = Vector2.ZERO
+		get_tree().call_group("npc_question", "reset_npc")
 		animated.play("idle")
 	)
 
 	tween.tween_interval(0.3)
-
 	tween.tween_property(fade, "modulate:a", 0.0, 1.0)
-
 	tween.tween_callback(func():
 		fade.visible = false
 		respawning = false
@@ -88,7 +88,7 @@ func _physics_process(delta):
 	if dead:
 		return
 	
-	#Congelar o player quando abrir o quiz
+	#Congela o player quando o quiz é aberto
 	if !pode_andar:
 		velocity = Vector2.ZERO
 		animated.play("idle")
